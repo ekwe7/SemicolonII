@@ -10,6 +10,6 @@ System.out.print(count + " ");
 }
 
 }
-}
+}print each result 5times
 
 

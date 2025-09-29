@@ -14,6 +14,7 @@ if(city1.compareTo(city2) < 0){
 	System.out.println("Ok " + city1 + " " + city2);
 }else{
 	System.out.println(city2 +" " + city1);
+
 }
 
 

@@ -1,24 +1,22 @@
-public class TaskFive{
+public class TaskSix{
 public static void main(String []ozy){
 
 int counter = 0;
+int index = 1;
 
 for(int count = 1; count <= 10; count++){
- if(count % 4 == 0){
+ if(count % 5 == 0){
  
- 	for(; counter <= 5; counter += 4){
+ 	for(; counter < count; counter +4){
 	System.out.print(" ");
 	}
-
+	
 }
-
-System.out.print(count + " ");
-
+System.out.print(counter + " ");
 }
 
 
 
 }
-
-
 }
+
