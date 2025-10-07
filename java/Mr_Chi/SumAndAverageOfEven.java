@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+public class SumAndAverageOfEven{
+public static void main(String []args){
+
+Scanner input = new Scanner(System.in);
+
+int sum = 0;
+int average = 0;
+for(int number = 0; number < 10; number++){
+
+	System.out.print("Enter a score(1-10): ");
+	int score = input.nextInt();
+	
+	if(score % 2 == 0){
+		sum = score + number;
+		sum++;
+		
+	}
+	
+
+} 
+
+	average = sum / 5;
+
+	System.out.println("Total sum is " + sum);
+	System.out.println("The average is " + average);
+
+}
+}
+
+
+
+
+
