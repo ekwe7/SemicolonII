@@ -15,7 +15,7 @@ while True:
     while True:
         try:
             user_answer = input(f"What is {number1} x {number2}: ")
-            if user_answer.strip()== "-1":
+            if user_answer == "-1":
                 print('can only accept numbers')
             elif user_answer == correct_answer:
                 print("Correct!")
