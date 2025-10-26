@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class StringIsUpperTest{
 
 	@Test
-	public void testThatStringIsEmpty(){
+	public void testThatStringIsUpper(){
 	
 		ConvertStringToUpper stringUpper = new ConvertStringToUpper();
 		
