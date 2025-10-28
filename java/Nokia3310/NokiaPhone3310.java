@@ -19,7 +19,7 @@ userChoice = input.nextInt();
 
 	switch (userChoice) {
 	case 1 -> phoneMenu();
-	case 0 -> System.out.println("Goodbye! Nokia");
+	case 0 -> System.out.println("Goodbye! idiot");
 	default -> System.out.println("Invalid choice.");
 	}
    } while(userChoice != 0);
@@ -93,31 +93,36 @@ int phoneBookChoice;
 	phoneBookChoice = input.nextInt();
 	
 	switch (phoneBookChoice){
- 		case 1 -> subMenu("SEARCH");
-		case 2 -> subMenu("SERVICE NOS");
-		case 3 -> subMenu("ADD NAME");
-		case 4 -> subMenu("ERASE");
-		case 5 -> subMenu("EDIT");
-		case 6 -> subMenu("ASSIGN TONE");
-		case 7 -> subMenu("SEND B'CARD");
+ 		case 1 -> subMenu("Search");
+		case 2 -> subMenu("Service Nos");
+		case 3 -> subMenu("Add name");
+		case 4 -> subMenu("Erase");
+		case 5 -> subMenu("Edit");
+		case 6 -> subMenu("Assign tone");
+		case 7 -> subMenu("Send b'card");
 		case 8 -> optionsMenu();
-		case 9 -> subMenu("SPEED DIALS");
-		case 10 -> subMenu("VOICE TAGS");
-		case 0 -> System.out.println("Returning to Phone Menu...");
-		default -> System.out.println("Invalid choice.");
+		case 9 -> subMenu("Speed dials");
+		case 10 -> subMenu("Voice tags");
+
+
 	}
   } while (phoneBookChoice != 0);
+  
 }//phoneBook
 
 
-//Simple MEthod for printing
 private static void subMenu(String title) {
-        int userChoice;
-        do {
-            System.out.println(title + " \n0. Back");
-            userChoice = input.nextInt();
-        } while (userChoice != 0);
-    }
+
+int userChoice;
+do {
+System.out.println(title);
+userChoice = input.nextInt();
+
+} while (userChoice != 0);
+
+}
+
+
 
 // Options submenu inside PhoneBook
 private static void optionsMenu(){
@@ -163,16 +168,16 @@ System.out.println("Select Choice: ");
 messageMenuChoice = input.nextInt();
 
 switch(messageMenuChoice){
-	case 1 -> subMenu("WRITE MESSAGES");
-	case 2 -> subMenu("INBOX");
-	case 3 -> subMenu("OUTBOX");
-	case 4 -> subMenu("PICTURE MESSAGES");
-	case 5 -> subMenu("TEMPLATES");
-	case 6 -> subMenu("SMILEYS");
+	case 1 -> subMenu("Write Message");
+	case 2 -> subMenu("Inbox");
+	case 3 -> subMenu("OutBox");
+	case 4 -> subMenu("Picture Messages");
+	case 5 -> subMenu("Templates");
+	case 6 -> subMenu("Smileys");
 	case 7 -> messageOptionMenu();
-	case 8 -> subMenu("INFO SERVICE");
-	case 9 -> subMenu("VOICE MAIL NUMBER");
-	case 10 -> subMenu("SERVICE COMMAND EDITOR");
+	case 8 -> subMenu("Info service");
+	case 9 -> subMenu("Voice MailBox Number");
+	case 10 -> subMenu("Service Command Editor");
 	case 0 -> System.out.println("Returning to Phone Menu...");
 	default -> System.out.println("Invalid choice.");
 
@@ -181,6 +186,12 @@ switch(messageMenuChoice){
   }while(messageMenuChoice != 0);
 
 }//messageMenu
+  
+
+
+  
+  
+  
   
 public static void messageOptionMenu(){
 	int messageOption;
@@ -196,64 +207,68 @@ public static void messageOptionMenu(){
 	messageOption = input.nextInt();
 	
 	switch(messageOption){
-		case 1 -> setMessageSetting();
+   		case 1 -> setMessage();
 		case 2 -> commonMessageSetting();
-		case 0 -> System.out.println("Returning to Phone Menu...");
-		default -> System.out.println("Invalid choice.");
 
-	
 	}
    }while(messageOption != 0);
 }//messageOption
 
-public static void setMessageSetting(){
-	int userSet;
-	
-	do{
-	System.out.println("""
-		========Set 1=========
-		1. Message Center Number
-		2. Message sent As
-		3. Message Validity
-		case 0 -> System.out.println("Returning to Phone Menu...");
-		default -> System.out.println("Invalid choice.");
 
-		""");
-	System.out.println("ENter onption: ");
-	userSet = input.nextInt();
-	
-	switch(userSet){
-		case 1 -> subMenu("MESSAGE CENTRE NUMBER");
-		case 2 -> subMenu("MESSAGE SENT AS");
-		case 3 -> subMenu("MESSAGE VALIDITY");
-		}
-	}while(userSet != 0);
-}//int userSet;
+
+public static void setMessage(){
+
+int setMsg;
+do{
+System.out.print("""
+
+	1. Message CEnter number
+	2. Message Sent as
+	3. Message validity
+
+
+""");
+
+System.out.println("Enter a number: ");
+setMsg = input.nextInt();
+
+switch(setMsg){
+	case 1 -> subMenu("Message Center Number \n 0. Back");
+	case 2 -> subMenu("Message sent as \n 0. Back");
+	case 3 -> subMenu("Massage validity \n 0. Back");
+}
+
+}while(setMsg != 0);
+
+
+
+}
+
 
 public static void commonMessageSetting(){
 int userCommon;
 
 do{
 System.out.println("""
-	=======COMMON=======
 	1. Delivery reports
 	2. Reply via same center
 	3. Character Support
-	case 0 -> System.out.println("Returning to Phone Menu...");
-	default -> System.out.println("Invalid choice.");
-
+	case 0 -> Back;
+	
+	
 	""");
 System.out.println("Select from options: ");
 	userCommon = input.nextInt();
 	
 	switch(userCommon){
-	case 1 -> subMenu("DELIVERY REPORTS");
-	case 2 -> subMenu("REPLY VIA SAME CENTRE");
-	case 3 -> subMenu("CHARACTER SUPPORT");
+	case 1 -> subMenu("Delivery reports");
+	case 2 -> subMenu("Reply via same center");
+	case 3 -> subMenu("Character Support");
 	}
   }while(userCommon != 0);
 
 }//commonMessageSetting
+
 
 
 //Chat
@@ -264,7 +279,6 @@ System.out.println("""
 	======CHAT=====
 	1. Chat
 	case 0 -> BAck;
-	default -> Invalid choice;
 
 	""");
 	System.out.println("Select from Option: ");
@@ -295,7 +309,6 @@ System.out.println("""
 	7. CAll Cost SEttings
 	8. Prepaid Credit
 	case 0 -> Back;
-	default -> Invalid choice;
 
 
 """);
@@ -303,14 +316,14 @@ System.out.println("Select from Options Above: ");
 userCallReg = input.nextInt();
 
 switch(userCallReg){
-	case 1 -> subMenu("MISSED CALLS");
-	case 2 -> subMenu("RECEIVED CALLS");
-	case 3 -> subMenu("DIALLED NUMBERS");
-	case 4 -> subMenu("ERASE RECENT CALL LISTS");
+	case 1 -> subMenu("Missed Calls");
+	case 2 -> subMenu("Dialled Numbers");
+	case 3 -> subMenu("Dialled Numbers");
+	case 4 -> subMenu("Erase redcent Call Lists");
 	case 5 -> showCallDuration();
 	case 6 -> showCallCost();
 	case 7 -> callCostSetting();
-	case 8 -> subMenu("PREPAID CREDIT");
+	case 8 -> subMenu("Prepaid Credit");
   }
 }while (userCallReg != 0);
 
@@ -328,7 +341,7 @@ System.out.println("""
 	4. Dialled calss Duration
 	5. Clear Timers
 	case 0 -> Back;
-	default -> Invalid choice;
+
 
 
 """);
@@ -336,10 +349,10 @@ System.out.println("Selection from options above: ");
 showCallDuration = input.nextInt();
 
 switch(showCallDuration){
-	case 1 -> subMenu("LAST CALL DURATION");
-	case 2 -> subMenu("ALL CALLS DURATION");
-	case 3 -> subMenu("RECEIVED CALLS DURATION");
-	case 4 -> subMenu("CLEAR TIMERS");
+	case 1 -> subMenu("Las Call Duration");
+	case 2 -> subMenu("All CAlls Duration");
+	case 3 -> subMenu("Received Calls Duration");
+	case 4 -> subMenu("Clear Timers");
 
 	}
 }while(showCallDuration != 0);
@@ -356,16 +369,16 @@ System.out.println("""
 	2. All Calls Cost
 	3. Clear Counters
 	case 0 -> Back;
-	default -> Invalid choice;
+
 
 """);
 System.out.println("Select from above: ");
 showCallCost = input.nextInt();
 
 switch(showCallCost){
-	case 1 -> subMenu("LAST CALL COST");
-	case 2 -> subMenu("ALL CALLS COST");
-	case 3 -> subMenu("CLEAR COUNTER");
+	case 1 -> subMenu("Last CAll Cost");
+	case 2 -> subMenu(" All Calls Cost");
+	case 3 -> subMenu("Clear Counters");
 	}
    }while(showCallCost != 0);
 }
@@ -379,15 +392,14 @@ System.out.println("""
 	1. Call Cost Limit
 	2. Show Costs In
 	case 0 -> Back;
-	default -> Invalid choice;
 
 """);
 System.out.println("Select from option above: ");
 	callCostSetting = input.nextInt();
 	
 	switch(callCostSetting){
-	case 1 -> subMenu("CALL COST LIMIT");
-	case 2 -> subMenu("SHOW COSTS IN");
+	case 1 -> subMenu("Call Cost Limit");
+	case 2 -> subMenu("Show Costs In");
 	}
 }while(callCostSetting != 0);
 
@@ -412,7 +424,6 @@ do
 	8. Vibrating alart
 	9. Screen Saver
 	case 0 -> Back
-	default -> Invalid choice
 
 	
 	""");
@@ -450,7 +461,8 @@ public static void phoneSetting(){
  	3. Security Settings
  	4. Restore FActory settings
  	case 0 -> Back
- 	default -> Invalid Choice
+
+
  	""");
  	System.out.println("Select from above: ");
  	setting = input.nextInt();
@@ -481,8 +493,6 @@ do
   5. Phone Line In Use
   6. Automatic Answer
   case 0 -> Back
-  default -> Invalid choice
-
   
   """);
   System.out.println("ENter a Number: ");
@@ -515,7 +525,6 @@ System.out.println("""
 	5. Lights
 	6. Confirm SIM Service Actions
 	case 0 -> Back
-	default -> Invalid choice
 	
 	""");
 	System.out.println("Enter a number: ");
@@ -546,7 +555,6 @@ do{
 	5. Phone Security
 	6. Change Access Codes
 	case 0 -> Back
-	default -> Invalid choice
 
 	""");
 	System.out.println("Enter a number: ");
@@ -573,7 +581,6 @@ System.out.println("""
 
 	1. info Service
 	case 0 -> Back
-	default -> Invalid choice
 
 	
 	""");
@@ -598,7 +605,6 @@ System.out.println("""
 	====== GAME =====
 	1. Game
 	case 0 -> Back
-	default -> Invalid choice
 
 	
 	""");
@@ -622,7 +628,6 @@ System.out.println("""
 	====== CALCULATOR =====
 	1. Calculator
 	case 0 -> Back
-	default -> Invalid choice
 
 	
 	""");

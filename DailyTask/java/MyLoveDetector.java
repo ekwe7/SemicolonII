@@ -16,7 +16,7 @@ int secondUser = scanner.nextInt();
 scanner.nextLine();
 
 boolean number1 = firstUser % 2 == 0;
-boolean number2 = secondUser % 2 == 0;
+boolean number2 = secondUser % 2 == 0; 
 
 boolean loveChecker= number1 != number2;
 

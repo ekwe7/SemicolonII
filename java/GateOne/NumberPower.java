@@ -17,7 +17,7 @@ for(int count = 1; count <= number2; count++){
 	total *= number1;
 }
 
-System.out.println(number1 + "raised to the power of " + number2 + " is " + total);
+System.out.println(number1 + " raised to the power of " + number2 + " is " + total);
 
 }
 }

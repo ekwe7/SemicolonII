@@ -10,4 +10,4 @@ def get_smallest(number):
 
 my_list = [5, 2, 8, 12, 3];
 output = get_smallest(my_list);
-print(output );
+print(output);

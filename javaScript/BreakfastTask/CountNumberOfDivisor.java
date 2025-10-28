@@ -5,8 +5,8 @@ public static void main(String... args) {
 int number = 12;
 int count = 0;
 
-for (int i = 1; i <= number; i++) {
-if (number % i == 0) {
+for (int index = 1; index <= number; index++) {
+if (number % index == 0) {
 count++;
 }
 }

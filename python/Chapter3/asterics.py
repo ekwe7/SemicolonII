@@ -1,12 +1,13 @@
 for numbers in range(1, 11):
 	for number in range(numbers):
-		print(f"{'*'}", end=" ")
+		print('*', end=" ")
 	print()
 
 print(" ")
+
 for number in range(10, 0, -1):
 	for numbers in range(0, number, 1):
-		print(f"{'*'}", end=" ")
+		print('*', end=" ")
 	print()
 #print(" ")
 

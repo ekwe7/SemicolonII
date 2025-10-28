@@ -1,15 +1,14 @@
 
-def only_float(a, b):
-    if isinstance(a, float) and isinstance(b, float):
+def check_float(a, b):
+    a_is_float = is_float(a)
+    b_is_float = is_float(b)
+
+    if a_is_float and b_is_float:
         return 2
-    elif isinstance(a, float) or isinstance(b, float):
+    elif a_is_float or b_is_float:
         return 1
     else:
         return 0
-
-
-number1 = float(input("Enter number one: "));
-number2 = float(input("Enter number two: "));
-output = number1, number2
-
-print(output);
+        
+        
+        

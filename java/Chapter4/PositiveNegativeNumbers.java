@@ -8,8 +8,6 @@ System.out.println("The number of positive numbers is ");
 int number = 4;
 int positive = 0;
 int negative = 0;
-int total = 0;
-int average = 0;
 int counter = 0;
 
 
@@ -21,8 +19,8 @@ while(number != 0){
 	if(number < 0){
 	negative++;
 }
-	if(number != 0){
-	counter++;
+	//if(number != 0){
+	//counter++;
 }
 }
 

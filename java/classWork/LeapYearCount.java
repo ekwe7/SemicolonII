@@ -11,8 +11,6 @@ for(int count = start; count <= end; count++){
 	
 	}
 	
-	
-}
 System.out.print(sum + "");
 
 }

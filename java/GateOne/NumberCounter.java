@@ -8,7 +8,6 @@ int positiveNumber = 0;
 int negativeNumber = 0;
 int zeroNumber = 0;
 
-
 do{
 System.out.print("Enter a number: ");
 double number = scanner.nextDouble();
@@ -19,6 +18,8 @@ positiveNumber ++;
 negativeNumber ++;
 }else{
 zeroNumber++;
+}
+
 }
 
 System.out.println("Number of positive number is: " + positiveNumber);

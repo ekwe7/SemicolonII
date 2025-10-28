@@ -1,27 +1,64 @@
-
-
-import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
 
-import org.junit.jupiter.api.BeforeEach;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+public class GroceryManagerApp{
+    
+ArrayList<String> groceryList = new ArrayList<String>();
 
-public class GroceryManagerAppTest{
-	private GroceryManagerApp app;
 
-	@BeforeEach
-	public void setUp(){
-		grocery = new GroceryManagerApp();
+public String checkGroceryInStock(){
+	return String.valueOf(groceryList.size());
+	
+}
+    
+    
+public String addGrocery(String groceryTitle){
+
+for(String grocery : groceryList){
+	if(grocery.equalsIgnoreCase(groceryTitle)){
+	return "item already exist";
 	}
 	
+}
+groceryList.add(groceryTitle);
+return "Grocery added Successfully";
+
+}
+
     
-	@Test
-	public void testCheckGroceryInStockWhenListIsEmpty(){
+public String removeFromGrocery(String groceryTitle){
+
+for (int index = 0; index < groceryList.size(); index++){
+	if(groceryList.get(index).equalsIgnoreCase(groceryTitle)) {
+	groceryList.remove(index);
+return "Grocery removed Successfully";
 	
-		String result = grocery.checkGroceryInStock("Apples");
-		assertEquals(0, result);
-    }
-    
-    
-  
-    
+	}
+}
+return "item does not exist";
+
+}
+
+
+public String showAllItems(){
+
+if(groceryList.isEmpty()){
+	return "Theres's no item in the list yet";
+}
+
+String result = "Items: ";
+
+for(int index = 0; index < groceryList.size(); index++){
+	result += groceryList.get(index);
+	if (index < groceryList.size()) {
+		result += ", ";
+	}
+  }
+	return result;
+}    
+
+
+
+
+
+
+}

@@ -9,14 +9,15 @@ int number1 = input.nextInt();
 System.out.print("ENter a number: ");
 int number2 = input.nextInt();
 
-int lcmNumber; 
+int lcmNumber;
+
 if (number1 > number2){
 	lcmNumber = number1;
 }else{
 	lcmNumber = number2;
 }
 
-for(; lcmNumber <= number1 * number2; lcmNumber++){
+for(; lcmNumbevr <= number1 * number2; lcmNumber++){
 	if(lcmNumber % number1 ==0 && lcmNumber %number2 == 0){
 	}
 }

@@ -7,5 +7,5 @@ def string_that_end_with(word):
 	else:
 		return word + 'ing';
 		
-result = string_that_end_with("poling");
+result = string_that_end_with("Semicolon");
 print(result);
