@@ -8,8 +8,6 @@ boolean[] myList = new boolean[number.length];
 
 for(int count = 0; count < number.length; count++){
 
-//int myNumber = number[count];
-
 	if(count * count == 0){
 
 	myList[count] = true;

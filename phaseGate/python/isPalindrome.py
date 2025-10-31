@@ -1,16 +1,19 @@
-def isPalindrome(number):
+def is_palindrome(words_list):
 
-	myList = [];
-	for num in len(number):
-		
-		if(num ** num % 2 == 0):
-			myList[num] = "true";
+	count = 0
+	for check in words_list:
+		palindrome = ""
+		for checker in check:
+			palindrome = checker + palindrome
+
+		if check == palindrome:
+			words_list[count] = True;
+
 		else:
-			myList[num] = "false";
-			
-	return myList;
-			
-			
-int myNumber = [4, 6, 25, 49];
-result = isPalindrome(myNumber);
-print(result);
+			words_list[count] = False;
+
+		count+=1
+	return words_list
+
+words_list  = ["madam", "kali", "hello", "noon"]
+print(is_palindrome(words_list))
